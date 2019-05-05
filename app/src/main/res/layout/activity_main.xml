@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/id_graphView"
+        android:layout_width="731dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/id_deviceListButton"
+        android:layout_width="140dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        android:text="Device List"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_graphView" />
+
+    <Switch
+        android:id="@+id/id_followDataSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text=" Follow Data  "
+        app:layout_constraintBottom_toBottomOf="@+id/id_btSwitch"
+        app:layout_constraintStart_toEndOf="@+id/id_btSwitch" />
+
+    <Switch
+        android:id="@+id/id_btSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:text="Toggle Bluetooth"
+        app:layout_constraintStart_toEndOf="@+id/id_deviceListButton"
+        app:layout_constraintTop_toTopOf="@+id/id_deviceListButton" />
+
+    <ListView
+        android:id="@+id/id_deviceListView"
+        style="@style/Widget.AppCompat.ListView.Menu"
+        android:layout_width="277dp"
+        android:layout_height="250dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintBottom_toTopOf="@+id/id_deviceListButton"
+        app:layout_constraintStart_toStartOf="@+id/id_deviceListButton" />
+
+
+</android.support.constraint.ConstraintLayout>
